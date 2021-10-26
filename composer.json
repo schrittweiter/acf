@@ -1,0 +1,23 @@
+{
+    "name": "schrittweiter/acf",
+    "type": "library",
+    "require": {
+        "wordplate/acf": "^11.1",
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Schrittweiter\\Acf\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David Kuhlmann",
+            "email": "dk@schrittweiter.de"
+        },
+        {
+            "name": "Lioba Brandhoff",
+            "email": "lb@schrittweiter.de"
+        }
+    ]
+}
