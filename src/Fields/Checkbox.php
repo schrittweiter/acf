@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Extend Image field type by "WordPlate Extended"
+ * Extend image field type by "WordPlate Extended"
  *
  * @link       https://schrittweiter.de
  * @since      1.0.0
