@@ -2,7 +2,7 @@
     "name": "schrittweiter/acf",
     "type": "library",
     "require": {
-        "wordplate/acf": "^11.1",
+        "wordplate/acf": "^11.2.0",
         "php": ">=7.4"
     },
     "autoload": {
