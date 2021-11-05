@@ -19,5 +19,7 @@
             "name": "Lioba Brandhoff",
             "email": "lb@schrittweiter.de"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
