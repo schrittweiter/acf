@@ -24,18 +24,18 @@ use WordPlate\Acf\Fields\FlexibleContent as Field;
 class FlexibleContent extends Field
 {
 
-	/**
-	 * set defaults on call
-	 *
-	 * @param string $label
-	 * @param string|null $name
-	 */
-	public function __construct(string $label, ?string $name = null)
-	{
-		parent::__construct($label, $name);
+    /**
+     * set defaults on call
+     *
+     * @param string $label
+     * @param string|null $name
+     */
+    public function __construct(string $label, ?string $name = null)
+    {
+        parent::__construct($label, $name);
 
         $this->advanced();
-	}
+    }
 
     /**
      * Show advanced Flexible Content settings
@@ -65,17 +65,17 @@ class FlexibleContent extends Field
     /**
      * Edit layout content in a modal
      * https://www.acf-extended.com/features/fields/flexible-content/modal-settings#edit-modal
-	 *
-	 * small, medium, large, xlarge, full
+     *
+     * small, medium, large, xlarge, full
      *
      * @return $this
      */
     public function modalEdit(string $size = 'full'): self
     {
-		$this->config->set('acfe_flexible_modal_edit', [
-			'acfe_flexible_modal_edit_enabled' => true,
-			'acfe_flexible_modal_edit_size' => $size
-		]);
+        $this->config->set('acfe_flexible_modal_edit', [
+            'acfe_flexible_modal_edit_enabled' => true,
+            'acfe_flexible_modal_edit_size' => $size
+        ]);
 
         return $this;
     }
@@ -84,22 +84,22 @@ class FlexibleContent extends Field
      * Select layouts in a modal
      * https://www.acf-extended.com/features/fields/flexible-content/modal-settings#selection-modal
      *
-	 * @param string $size
-	 * @param string $title
-	 * @param int $cols
-	 * @param bool $cats
-	 * @return $this
+     * @param string $size
+     * @param string $title
+     * @param int $cols
+     * @param bool $cats
+     * @return $this
      */
     public function modalSelection(string $size = 'full', string $title = 'Choose Layout', int $cols = 4, bool $cats = false): self
     {
-		$this->config->set('acfe_flexible_modal', [
-			'acfe_flexible_modal_enabled' => true,
-			'acfe_flexible_modal_title' => $title,
-			'acfe_flexible_modal_size' => $size,
-			'acfe_flexible_modal_col' => $cols,
-			'acfe_flexible_modal_categories' => $cats
+        $this->config->set('acfe_flexible_modal', [
+            'acfe_flexible_modal_enabled' => true,
+            'acfe_flexible_modal_title' => $title,
+            'acfe_flexible_modal_size' => $size,
+            'acfe_flexible_modal_col' => $cols,
+            'acfe_flexible_modal_categories' => $cats
 
-		]);
+        ]);
 
         return $this;
     }
@@ -132,8 +132,8 @@ class FlexibleContent extends Field
     /**
      * Layouts Placeholder
      * Display a placeholder with an icon.
-	 *
-	 * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings#layouts-placeholder
+     *
+     * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings#layouts-placeholder
      *
      * @return $this
      */
@@ -158,9 +158,9 @@ class FlexibleContent extends Field
     }
 
     /**
-	 * Layouts Thumbnails
-	 * Set a thumbnail for each layouts.
-	 *
+     * Layouts Thumbnails
+     * Set a thumbnail for each layouts.
+     *
      * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings#layouts-thumbnails
      *
      * @return $this
@@ -173,9 +173,9 @@ class FlexibleContent extends Field
     }
 
     /**
-	 * Layouts Settings Modal
-	 * Choose a field group to clone and to be used as a configuration modal.
-	 *
+     * Layouts Settings Modal
+     * Choose a field group to clone and to be used as a configuration modal.
+     *
      * https://www.acf-extended.com/features/fields/flexible-content/modal-settings#settings-modal
      *
      * @return $this
@@ -202,35 +202,35 @@ class FlexibleContent extends Field
     }
 
 
-	/**
-	 * Additional Actions
-	 *
-	 * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings
-	 *
-	 * Possible values: title, toggle, copy, lock, close
-	 *
-	 * @param array $actions
-	 * @return $this
-	 */
-	public function addActions(array $actions): self
-	{
-		$this->config->set('acfe_flexible_add_actions', $actions);
+    /**
+     * Additional Actions
+     *
+     * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings
+     *
+     * Possible values: title, toggle, copy, lock, close
+     *
+     * @param array $actions
+     * @return $this
+     */
+    public function addActions(array $actions): self
+    {
+        $this->config->set('acfe_flexible_add_actions', $actions);
 
-		return $this;
-	}
+        return $this;
+    }
 
-	/**
-	 * Empty Message ( Text displayed when the flexible field is empty )
-	 *
-	 * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings#empty-message
-	 *
-	 * @param string $message
-	 * @return $this
-	 */
-	public function emptyMessage(string $message): self
-	{
-		$this->config->set('acfe_flexible_empty_message', $message);
+    /**
+     * Empty Message ( Text displayed when the flexible field is empty )
+     *
+     * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings#empty-message
+     *
+     * @param string $message
+     * @return $this
+     */
+    public function emptyMessage(string $message): self
+    {
+        $this->config->set('acfe_flexible_empty_message', $message);
 
-		return $this;
-	}
+        return $this;
+    }
 }

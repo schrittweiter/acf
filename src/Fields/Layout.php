@@ -85,4 +85,20 @@ class Layout extends Field
 
         return $this;
     }
+
+    /**
+     * Render the layout using custom template, style & javascript files
+     * https://www.acf-extended.com/features/fields/flexible-content/dynamic-render
+     *
+     * @param array $files
+     * @return $this
+     */
+    public function render(array $files = []): self
+    {
+        $this->config->set('acfe_flexible_render_template', $files['template'] ?? '');
+        $this->config->set('acfe_flexible_render_style', $files['style'] ?? '');
+        $this->config->set('acfe_flexible_render_script', $files['script'] ?? '');
+
+        return $this;
+    }
 }
