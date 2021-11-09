@@ -65,12 +65,17 @@ class FlexibleContent extends Field
     /**
      * Edit layout content in a modal
      * https://www.acf-extended.com/features/fields/flexible-content/modal-settings#edit-modal
+	 *
+	 * small, medium, large, xlarge, full
      *
      * @return $this
      */
-    public function modalEdit(): self
+    public function modalEdit(string $size = 'full'): self
     {
-        $this->config->set('acfe_flexible_modal_edit', true);
+		$this->config->set('acfe_flexible_modal_edit', [
+			'acfe_flexible_modal_edit_enabled' => true,
+			'acfe_flexible_modal_edit_size' => $size
+		]);
 
         return $this;
     }
@@ -79,11 +84,22 @@ class FlexibleContent extends Field
      * Select layouts in a modal
      * https://www.acf-extended.com/features/fields/flexible-content/modal-settings#selection-modal
      *
-     * @return $this
+	 * @param string $size
+	 * @param string $title
+	 * @param int $cols
+	 * @param bool $cats
+	 * @return $this
      */
-    public function modal(): self
+    public function modalSelection(string $size = 'full', string $title = 'Choose Layout', int $cols = 4, bool $cats = false): self
     {
-        $this->config->set('acfe_flexible_modal', true);
+		$this->config->set('acfe_flexible_modal', [
+			'acfe_flexible_modal_enabled' => true,
+			'acfe_flexible_modal_title' => $title,
+			'acfe_flexible_modal_size' => $size,
+			'acfe_flexible_modal_col' => $cols,
+			'acfe_flexible_modal_categories' => $cats
+
+		]);
 
         return $this;
     }
@@ -114,6 +130,21 @@ class FlexibleContent extends Field
     }
 
     /**
+     * Layouts Placeholder
+     * Display a placeholder with an icon.
+	 *
+	 * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings#layouts-placeholder
+     *
+     * @return $this
+     */
+    public function placeholder(): self
+    {
+        $this->config->set('acfe_flexible_layouts_placeholder', true);
+
+        return $this;
+    }
+
+    /**
      * Use layouts render settings to display a dynamic preview in the administration
      * https://www.acf-extended.com/features/fields/flexible-content/dynamic-render#dynamic-preview
      *
@@ -122,6 +153,36 @@ class FlexibleContent extends Field
     public function previews(): self
     {
         $this->config->set('acfe_flexible_layouts_previews', true);
+
+        return $this;
+    }
+
+    /**
+	 * Layouts Thumbnails
+	 * Set a thumbnail for each layouts.
+	 *
+     * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings#layouts-thumbnails
+     *
+     * @return $this
+     */
+    public function thumbnails(): self
+    {
+        $this->config->set('acfe_flexible_layouts_thumbnails', true);
+
+        return $this;
+    }
+
+    /**
+	 * Layouts Settings Modal
+	 * Choose a field group to clone and to be used as a configuration modal.
+	 *
+     * https://www.acf-extended.com/features/fields/flexible-content/modal-settings#settings-modal
+     *
+     * @return $this
+     */
+    public function settings(): self
+    {
+        $this->config->set('acfe_flexible_layouts_settings', true);
 
         return $this;
     }
@@ -139,4 +200,37 @@ class FlexibleContent extends Field
 
         return $this;
     }
+
+
+	/**
+	 * Additional Actions
+	 *
+	 * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings
+	 *
+	 * Possible values: title, toggle, copy, lock, close
+	 *
+	 * @param array $actions
+	 * @return $this
+	 */
+	public function addActions(array $actions): self
+	{
+		$this->config->set('acfe_flexible_add_actions', $actions);
+
+		return $this;
+	}
+
+	/**
+	 * Empty Message ( Text displayed when the flexible field is empty )
+	 *
+	 * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings#empty-message
+	 *
+	 * @param string $message
+	 * @return $this
+	 */
+	public function emptyMessage(string $message): self
+	{
+		$this->config->set('acfe_flexible_empty_message', $message);
+
+		return $this;
+	}
 }
