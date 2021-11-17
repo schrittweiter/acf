@@ -38,6 +38,54 @@ Now you can make use of the fields like this (Please refer to the docs of wordpl
 
 and thats it! Happy creating
 
-## Todo
+## Supported third-party plugins
+___
 
+## [Advanced Custom Fields: Extended Pro](https://www.acf-extended.com/)
+
+We have currently implemented some custom fields from ACF Extended Pro. All custom fields listed here are based on version 0.8.8.6 of the plugin.
+
+### [Advanced Link](https://www.acf-extended.com/features/fields/advanced-link)
+___
+
+Display a modern Link Selector in a modal which allow customization. Posts, Post Types Archives & terms selection can be filtered in the field administration.
+
+For more details visit: (https://www.acf-extended.com/features/fields/advanced-link)
+
+**Usage example:**
+
+```php
+<?php
+
+use Schrittweiter\Acf\Fields\AdvancedLink;
+
+AdvancedLink::make('LINK LABEL','link_fieldname')
+    ->postType(['post']) // array, Filter which Post Types are allowed
+    ->taxonomy(['category']) // array, Filter which Taxonomies are allowed
+```
+
+## [ACF: FocusPoint](https://github.com/ooksanen/acf-focuspoint)
+
+Adds a new field type to ACF allowing users to select a focal point on image.
+
+The plugin developer is looking for sponsors, if you like this plugin, buy him a beer by clicking the Sponsor button at his repo https://github.com/ooksanen/acf-focuspoint
+
+**Usage example:**
+
+```php
+<?php
+
+use Schrittweiter\Acf\Fields\FocusPoint;
+
+FocusPoint::make('FOCUS POINT LABEL','focuspoint_fieldname')
+    ->instructions('Select Image.')
+    ->required()
+    ->mimeTypes(['jpg', 'jpeg', 'png'])
+    ->previewSize('medium') // thumbnail, medium or large
+    ->library('all') // all or uploadedTo
+```
+
+## Todos
+___
+- [ ] Complete ACF-Extended integration
 - [ ] Add to wpackagist instead of packagist, since this is a WP only extension
