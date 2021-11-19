@@ -87,7 +87,25 @@ FocusPoint::make('FOCUS POINT LABEL','focuspoint_fieldname')
 ```
 ___
 
+## [ACF OpenStreetMap Field](https://wordpress.org/plugins/acf-openstreetmap-field/)
+
+Adds a new field type to ACF for a hazzle free OpenStreetMap.
+
+**Usage example:**
+
+```php
+<?php
+
+use Schrittweiter\Acf\Fields\OpenStreetMap;
+
+OpenStreetMap::make('OPEN STREET MAP LABEL','openstreetmap_fieldname')
+    ->required()
+
+```
+___
+
 ## Todos
 
 - [ ] Complete ACF-Extended integration
+- [ ] Complete OpenStreetMap - documentation
 - [ ] Add to wpackagist instead of packagist, since this is a WP only extension
