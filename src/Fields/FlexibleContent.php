@@ -107,11 +107,21 @@ class FlexibleContent extends Field
     /**
      * Enable columns mode
      * https://www.acf-extended.com/features/fields/flexible-content/advanced-settings#columns-mode
+     *
+     * @param string $align
+     * @param string $vAlign
+     * @param bool $nowrap
      * @return $this
      */
-    public function grid(): self
+    public function grid(string $align = 'center', string $vAlign = 'stretch', $nowrap = 0): self
     {
-        $this->config->set('acfe_flexible_grid', true);
+        $this->config->set('acfe_flexible_grid', [
+            'acfe_flexible_grid_enabled' => true,
+            'acfe_flexible_grid_align' => $align,
+            'acfe_flexible_grid_valign' => $vAlign,
+            'acfe_flexible_grid_wrap' => $nowrap
+
+        ]);
 
         return $this;
     }
