@@ -87,6 +87,40 @@ class Layout extends Field
     }
 
     /**
+     * Default Column
+     * Define the default column size when the layout is being added
+     *
+     * options: 0 = auto, 1, 2 ,3 ,4 ,5 , 6, 7, 8, 9, 10, 11, 12
+     *
+     * https://www.acf-extended.com/features/fields/flexible-content/grid-system#layouts-grid-settings
+     *
+     * @return $this
+     */
+    public function defaultColumn(int $size = 12): self
+    {
+        $this->config->set('acfe_layout_col', $size);
+
+        return $this;
+    }
+
+    /**
+     * Allowed Column
+     * Define the allowed columns the user can choose
+     *
+     * options: array 0 = auto, 1, 2 ,3 ,4 ,5 , 6, 7, 8, 9, 10, 11, 12
+     *
+     * https://www.acf-extended.com/features/fields/flexible-content/grid-system#layouts-grid-settings
+     *
+     * @return $this
+     */
+    public function allowedColumns(array $size = []): self
+    {
+        $this->config->set('acfe_layout_allowed_col', $size);
+
+        return $this;
+    }
+
+    /**
      * Render the layout using custom template, style & javascript files
      * https://www.acf-extended.com/features/fields/flexible-content/dynamic-render
      *
