@@ -121,6 +121,22 @@ class Layout extends Field
     }
 
     /**
+     * Add support for Layout location rules
+     *
+     *
+     * https://www.acf-extended.com/features/fields/flexible-content/location-rules#layouts-location-rules
+     *
+     * @return $this
+     */
+    public function allowedColumns(array $rules = []): self
+    {
+        $ruleSetting = array_map(fn ($location) => $location->get(), $rules);
+        $this->settings['acfe_layout_locations'] = $ruleSetting;
+
+        return $this;
+    }
+
+    /**
      * Render the layout using custom template, style & javascript files
      * https://www.acf-extended.com/features/fields/flexible-content/dynamic-render
      *

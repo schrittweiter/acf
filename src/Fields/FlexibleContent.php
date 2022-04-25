@@ -243,4 +243,18 @@ class FlexibleContent extends Field
 
         return $this;
     }
+
+    /**
+     * Add support for location rules
+     *
+     * https://www.acf-extended.com/features/fields/flexible-content/location-rules
+     *
+     * @return $this
+     */
+    public function hasLocations(): self
+    {
+        $this->settings['acfe_flexible_layouts_locations'] = true;
+
+        return $this;
+    }
 }
