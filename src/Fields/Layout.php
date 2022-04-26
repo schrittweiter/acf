@@ -128,7 +128,7 @@ class Layout extends Field
      *
      * @return $this
      */
-    public function allowedColumns(array $rules = []): self
+    public function locations(array $rules = []): self
     {
         $ruleSetting = array_map(fn ($location) => $location->get(), $rules);
         $this->settings['acfe_layout_locations'] = $ruleSetting;
