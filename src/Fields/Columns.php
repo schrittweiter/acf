@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
+use WordPlate\Acf\Fields\Settings\ConditionalLogic;
 use WordPlate\Acf\Fields\Field;
 
 class Columns extends Field
@@ -50,7 +50,7 @@ class Columns extends Field
 	 */
 	public function columns(string $value): self
 	{
-		$this->config->set('columns', $value);
+		$this->settings['columns'] = $value;
 
 		return $this;
 	}
@@ -63,7 +63,7 @@ class Columns extends Field
 	 */
 	public function endpoint(): self
 	{
-		$this->config->set('endpoint', true);
+		$this->settings['endpoint'] = true;
 
 		return $this;
 	}
@@ -78,7 +78,7 @@ class Columns extends Field
 	 */
 	public function border(array $border): self
 	{
-		$this->config->set('border', $border);
+		$this->settings['border'] = $border;
 
 		return $this;
 	}

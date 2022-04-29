@@ -19,16 +19,16 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Attributes\Choices;
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\DefaultValue;
-use WordPlate\Acf\Fields\Attributes\DirectionLayout;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Multiple;
-use WordPlate\Acf\Fields\Attributes\Nullable;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\ReturnFormat;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
+use WordPlate\Acf\Fields\Settings\Choices;
+use WordPlate\Acf\Fields\Settings\ConditionalLogic;
+use WordPlate\Acf\Fields\Settings\DefaultValue;
+use WordPlate\Acf\Fields\Settings\DirectionLayout;
+use WordPlate\Acf\Fields\Settings\Instructions;
+use WordPlate\Acf\Fields\Settings\Multiple;
+use WordPlate\Acf\Fields\Settings\Nullable;
+use WordPlate\Acf\Fields\Settings\Required;
+use WordPlate\Acf\Fields\Settings\ReturnFormat;
+use WordPlate\Acf\Fields\Settings\Wrapper;
 use WordPlate\Acf\Fields\Field;
 
 class ImageSelector extends Field
@@ -69,9 +69,9 @@ class ImageSelector extends Field
 	 */
 	public function container(string $width = '', string $height = '', int $border = 4): self
 	{
-		$this->config->set('width', $width);
-		$this->config->set('height', $height);
-		$this->config->set('border', $border);
+		$this->settings['width'] = $width;
+		$this->settings['height'] = $height;
+		$this->settings['border'] = $border;
 
 		return $this;
 	}
@@ -84,7 +84,7 @@ class ImageSelector extends Field
 	 */
 	public function imageSize(string $size): self
 	{
-		$this->config->set('image_size', $size);
+		$this->settings['image_size'] = $size;
 
 		return $this;
 	}

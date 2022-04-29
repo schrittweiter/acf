@@ -19,12 +19,12 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Attributes\Layout;
+use WordPlate\Acf\Fields\Settings\Layout;
 use WordPlate\Acf\Fields\Field;
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
+use WordPlate\Acf\Fields\Settings\ConditionalLogic;
+use WordPlate\Acf\Fields\Settings\Instructions;
+use WordPlate\Acf\Fields\Settings\Required;
+use WordPlate\Acf\Fields\Settings\Wrapper;
 
 class Clones extends Field
 {
@@ -56,7 +56,7 @@ class Clones extends Field
 	 */
 	public function fields(array $value): self
 	{
-		$this->config->set('clone', $value);
+		$this->settings['clone'] = $value;
 
 		return $this;
 	}
@@ -69,7 +69,7 @@ class Clones extends Field
 	 */
 	public function display(string $value): self
 	{
-		$this->config->set('display', $value);
+		$this->settings['display'] = $value;
 
 		return $this;
 	}
@@ -81,7 +81,7 @@ class Clones extends Field
 	 */
 	public function prefixLabel(): self
 	{
-		$this->config->set('prefix_label', true);
+		$this->settings['prefix_label'] = true;
 
 		return $this;
 	}
@@ -93,7 +93,7 @@ class Clones extends Field
 	 */
 	public function prefixName(): self
 	{
-		$this->config->set('prefix_name', true);
+		$this->settings['prefix_name'] = true;
 
 		return $this;
 	}
@@ -105,7 +105,7 @@ class Clones extends Field
 	 */
 	public function seamless(): self
 	{
-		$this->config->set('acfe_seamless_style', true);
+		$this->settings['acfe_seamless_style'] = true;
 
 		return $this;
 	}
@@ -118,7 +118,7 @@ class Clones extends Field
 	public function modal(): self
 	{
 		$this->display('group');
-		$this->config->set('acfe_clone_modal', true);
+		$this->settings['acfe_clone_modal'] = true;
 
 		return $this;
 	}
@@ -131,7 +131,7 @@ class Clones extends Field
 	public function modalClose(): self
 	{
 		$this->modal();
-		$this->config->set('acfe_clone_modal_close', true);
+		$this->settings['acfe_clone_modal_close'] = true;
 
 		return $this;
 	}
@@ -145,7 +145,7 @@ class Clones extends Field
 	 */
 	public function modalButton(string $value): self
 	{
-		$this->config->set('acfe_clone_modal_button', $value);
+		$this->settings['acfe_clone_modal_button'] = $value;
 
 		return $this;
 	}
@@ -160,7 +160,7 @@ class Clones extends Field
 	 */
 	public function modalSize(string $value): self
 	{
-		$this->config->set('acfe_clone_modal_size', $value);
+		$this->settings['acfe_clone_modal_size'] = $value;
 
 		return $this;
 	}

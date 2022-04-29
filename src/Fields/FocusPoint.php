@@ -20,14 +20,14 @@
 namespace Schrittweiter\Acf\Fields;
 
 use WordPlate\Acf\Fields\Field;
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Library;
-use WordPlate\Acf\Fields\Attributes\MimeTypes;
-use WordPlate\Acf\Fields\Attributes\Nullable;
-use WordPlate\Acf\Fields\Attributes\PreviewSize;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
+use WordPlate\Acf\Fields\Settings\ConditionalLogic;
+use WordPlate\Acf\Fields\Settings\Instructions;
+use WordPlate\Acf\Fields\Settings\Library;
+use WordPlate\Acf\Fields\Settings\MimeTypes;
+use WordPlate\Acf\Fields\Settings\Nullable;
+use WordPlate\Acf\Fields\Settings\PreviewSize;
+use WordPlate\Acf\Fields\Settings\Required;
+use WordPlate\Acf\Fields\Settings\Wrapper;
 
 class FocusPoint extends Field
 {

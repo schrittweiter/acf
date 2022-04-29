@@ -20,11 +20,11 @@
 namespace Schrittweiter\Acf\Fields;
 
 use WordPlate\Acf\Fields\Field;
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Nullable;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
+use WordPlate\Acf\Fields\Settings\ConditionalLogic;
+use WordPlate\Acf\Fields\Settings\Instructions;
+use WordPlate\Acf\Fields\Settings\Nullable;
+use WordPlate\Acf\Fields\Settings\Required;
+use WordPlate\Acf\Fields\Settings\Wrapper;
 
 class ImageMapping extends Field
 {
@@ -56,7 +56,7 @@ class ImageMapping extends Field
 	 */
     public function imageField(string $imageField): self
     {
-        $this->config->set('image_field_label', $imageField);
+        $this->settings['image_field_label'] = $imageField;
 
         return $this;
     }
@@ -70,7 +70,7 @@ class ImageMapping extends Field
 	 */
     public function percentBased(): self
     {
-        $this->config->set('percent_based', true);
+        $this->settings['percent_based'] = true;
 
         return $this;
     }

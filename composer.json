@@ -2,8 +2,8 @@
     "name": "schrittweiter/acf",
     "type": "library",
     "require": {
-        "wordplate/acf": "^11.2.0",
-        "php": ">=7.4"
+        "wordplate/acf": "^12",
+        "php": ">=8.0"
     },
     "autoload": {
         "psr-4": {

@@ -19,12 +19,12 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\DefaultValue;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Placeholder;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
+use WordPlate\Acf\Fields\Settings\ConditionalLogic;
+use WordPlate\Acf\Fields\Settings\DefaultValue;
+use WordPlate\Acf\Fields\Settings\Instructions;
+use WordPlate\Acf\Fields\Settings\Placeholder;
+use WordPlate\Acf\Fields\Settings\Required;
+use WordPlate\Acf\Fields\Settings\Wrapper;
 use WordPlate\Acf\Fields\Field;
 
 class CodeEditor extends Field
@@ -63,7 +63,7 @@ class CodeEditor extends Field
 	 */
 	public function mode(string $value): self
 	{
-		$this->config->set('mode', $value);
+		$this->settings['mode'] = $value;
 
 		return $this;
 	}
@@ -75,7 +75,7 @@ class CodeEditor extends Field
 	 */
 	public function lines(): self
 	{
-		$this->config->set('lines', true);
+		$this->settings['lines'] = true;
 
 		return $this;
 	}
@@ -89,7 +89,7 @@ class CodeEditor extends Field
 	 */
 	public function indentUnit(int $value): self
 	{
-		$this->config->set('indent_unit', $value);
+		$this->settings['indent_unit'] = $value;
 
 		return $this;
 	}
@@ -103,7 +103,7 @@ class CodeEditor extends Field
 	 */
 	public function maxLength(int $value): self
 	{
-		$this->config->set('maxlength', $value);
+		$this->settings['maxlength'] = $value;
 
 		return $this;
 	}
@@ -117,7 +117,7 @@ class CodeEditor extends Field
 	 */
 	public function rows(int $value): self
 	{
-		$this->config->set('rows', $value);
+		$this->settings['rows'] = $value;
 
 		return $this;
 	}
@@ -131,7 +131,7 @@ class CodeEditor extends Field
 	 */
 	public function maxRows(int $value): self
 	{
-		$this->config->set('max_rows', $value);
+		$this->settings['max_rows'] = $value;
 
 		return $this;
 	}
@@ -143,7 +143,7 @@ class CodeEditor extends Field
 	 */
 	public function returnEntities(): self
 	{
-		$this->config->set('return_entities', true);
+		$this->settings['return_entities'] = true;
 
 		return $this;
 	}

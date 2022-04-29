@@ -19,10 +19,10 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
+use WordPlate\Acf\Fields\Settings\ConditionalLogic;
+use WordPlate\Acf\Fields\Settings\Instructions;
+use WordPlate\Acf\Fields\Settings\Required;
+use WordPlate\Acf\Fields\Settings\Wrapper;
 use WordPlate\Acf\Fields\Field;
 
 class Button extends Field
@@ -60,7 +60,7 @@ class Button extends Field
 	 */
 	public function buttonValue(string $value): self
 	{
-		$this->config->set('button_value', $value);
+		$this->settings['button_value'] = $value;
 
 		return $this;
 	}
@@ -75,7 +75,7 @@ class Button extends Field
 	 */
 	public function buttonType(string $value): self
 	{
-		$this->config->set('button_type', $value);
+		$this->settings['button_type'] = $value;
 
 		return $this;
 	}
@@ -89,7 +89,7 @@ class Button extends Field
 	 */
 	public function buttonBefore(string $value): self
 	{
-		$this->config->set('button_before', $value);
+		$this->settings['button_before'] = $value;
 
 		return $this;
 	}
@@ -103,7 +103,7 @@ class Button extends Field
 	 */
 	public function buttonAfter(string $value): self
 	{
-		$this->config->set('button_after', $value);
+		$this->settings['button_after'] = $value;
 
 		return $this;
 	}
@@ -117,7 +117,7 @@ class Button extends Field
 	 */
 	public function buttonClass(string $value): self
 	{
-		$this->config->set('button_class', $value);
+		$this->settings['button_class'] = $value;
 
 		return $this;
 	}
@@ -131,7 +131,7 @@ class Button extends Field
 	 */
 	public function buttonId(string $value): self
 	{
-		$this->config->set('button_id', $value);
+		$this->settings['button_id'] = $value;
 
 		return $this;
 	}
@@ -145,7 +145,7 @@ class Button extends Field
 	 */
 	public function buttonAjax(): self
 	{
-		$this->config->set('button_ajax', true);
+		$this->settings['button_ajax'] = true;
 
 		return $this;
 	}
