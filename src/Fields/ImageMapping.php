@@ -34,7 +34,7 @@ class ImageMapping extends Field
     use Wrapper;
     use ConditionalLogic;
 
-	protected $type = 'image_mapping';
+	protected ?string $type = 'image_mapping';
 
 	/**
 	 * set defaults on call

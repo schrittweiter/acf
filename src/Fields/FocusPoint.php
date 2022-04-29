@@ -40,7 +40,7 @@ class FocusPoint extends Field
 	use PreviewSize;
 	use ConditionalLogic;
 
-	protected $type = 'focuspoint';
+	protected ?string $type = 'focuspoint';
 
 	/**
 	 * set defaults on call

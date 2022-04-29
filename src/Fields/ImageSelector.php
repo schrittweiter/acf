@@ -45,7 +45,7 @@ class ImageSelector extends Field
 	use Required;
 	use Wrapper;
 
-	protected $type = 'acfe_image_selector';
+	protected ?string $type = 'acfe_image_selector';
 
 	/**
 	 * set defaults on call

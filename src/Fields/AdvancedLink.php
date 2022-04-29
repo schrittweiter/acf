@@ -33,7 +33,7 @@ class AdvancedLink extends Field
 	use Wrapper;
 	use Instructions;
 
-	protected $type = 'acfe_advanced_link';
+	protected ?string $type = 'acfe_advanced_link';
 
 	/**
 	 * set defaults on call

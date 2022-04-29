@@ -32,7 +32,7 @@ class Table extends Field
 	use Wrapper;
 	use ConditionalLogic;
 
-	protected $type = 'table';
+	protected ?string $type = 'table';
 
 	/**
 	 * set defaults on call

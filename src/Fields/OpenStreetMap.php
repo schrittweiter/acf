@@ -34,7 +34,7 @@ class OpenStreetMap extends Field
 	use Wrapper;
 	use ConditionalLogic;
 
-	protected $type = 'open_street_map';
+	protected ?string $type = 'open_street_map';
 
 	/**
 	 * set defaults on call

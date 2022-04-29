@@ -34,7 +34,7 @@ class Clones extends Field
 	use Wrapper;
 	use Layout;
 
-	protected $type = 'clone';
+	protected ?string $type = 'clone';
 
 	/**
 	 * set defaults on call

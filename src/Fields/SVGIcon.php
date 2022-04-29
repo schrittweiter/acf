@@ -38,7 +38,7 @@ class SVGIcon extends Field
 	use Wrapper;
 	use ConditionalLogic;
 
-	protected $type = 'svg_icon';
+	protected ?string $type = 'svg_icon';
 
 	/**
 	 * set defaults on call

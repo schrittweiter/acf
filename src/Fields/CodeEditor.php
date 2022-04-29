@@ -37,7 +37,7 @@ class CodeEditor extends Field
 	use Required;
 	use Wrapper;
 
-	protected $type = 'acfe_code_editor';
+	protected ?string $type = 'acfe_code_editor';
 
 	/**
 	 * set defaults on call

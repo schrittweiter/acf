@@ -33,7 +33,7 @@ class Button extends Field
 	use Wrapper;
 	use Instructions;
 
-	protected $type = 'acfe_button';
+	protected ?string $type = 'acfe_button';
 
 	/**
 	 * set defaults on call

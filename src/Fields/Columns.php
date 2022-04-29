@@ -27,7 +27,7 @@ class Columns extends Field
 
 	use ConditionalLogic;
 
-	protected $type = 'acfe_column';
+	protected ?string $type = 'acfe_column';
 
 	/**
 	 * set defaults on call
