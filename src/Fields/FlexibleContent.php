@@ -44,7 +44,7 @@ class FlexibleContent extends Field
      */
     public function advanced(): self
     {
-        $this->config->set('acfe_flexible_advanced', true);
+        $this->settings['acfe_flexible_advanced'] = true;
 
         return $this;
     }
@@ -57,7 +57,7 @@ class FlexibleContent extends Field
      */
     public function stylisedButton(): self
     {
-        $this->config->set('acfe_flexible_stylised_button', true);
+        $this->settings['acfe_flexible_stylised_button'] = true;
 
         return $this;
     }
@@ -72,10 +72,10 @@ class FlexibleContent extends Field
      */
     public function modalEdit(string $size = 'full'): self
     {
-        $this->config->set('acfe_flexible_modal_edit', [
+        $this->settings['acfe_flexible_modal_edit'] = [
             'acfe_flexible_modal_edit_enabled' => true,
             'acfe_flexible_modal_edit_size' => $size
-        ]);
+        ];
 
         return $this;
     }
@@ -92,14 +92,14 @@ class FlexibleContent extends Field
      */
     public function modalSelection(string $size = 'full', string $title = 'Choose Layout', int $cols = 4, bool $cats = false): self
     {
-        $this->config->set('acfe_flexible_modal', [
+        $this->settings['acfe_flexible_modal'] = [
             'acfe_flexible_modal_enabled' => true,
             'acfe_flexible_modal_title' => $title,
             'acfe_flexible_modal_size' => $size,
             'acfe_flexible_modal_col' => $cols,
             'acfe_flexible_modal_categories' => $cats
 
-        ]);
+        ];
 
         return $this;
     }
@@ -115,13 +115,13 @@ class FlexibleContent extends Field
      */
     public function grid(string $align = 'center', string $vAlign = 'stretch', $nowrap = 0): self
     {
-        $this->config->set('acfe_flexible_grid', [
+        $this->settings['acfe_flexible_grid'] =[
             'acfe_flexible_grid_enabled' => true,
             'acfe_flexible_grid_align' => $align,
             'acfe_flexible_grid_valign' => $vAlign,
             'acfe_flexible_grid_wrap' => $nowrap
 
-        ]);
+        ];
 
         return $this;
     }
@@ -134,7 +134,7 @@ class FlexibleContent extends Field
      */
     public function templates(): self
     {
-        $this->config->set('acfe_flexible_layouts_templates', true);
+        $this->settings['acfe_flexible_layouts_templates'] = true;
 
         return $this;
     }
@@ -149,7 +149,7 @@ class FlexibleContent extends Field
      */
     public function placeholder(): self
     {
-        $this->config->set('acfe_flexible_layouts_placeholder', true);
+        $this->settings['acfe_flexible_layouts_placeholder'] = true;
 
         return $this;
     }
@@ -162,7 +162,7 @@ class FlexibleContent extends Field
      */
     public function previews(): self
     {
-        $this->config->set('acfe_flexible_layouts_previews', true);
+        $this->settings['acfe_flexible_layouts_previews'] = true;
 
         return $this;
     }
@@ -177,7 +177,7 @@ class FlexibleContent extends Field
      */
     public function thumbnails(): self
     {
-        $this->config->set('acfe_flexible_layouts_thumbnails', true);
+        $this->settings['acfe_flexible_layouts_thumbnails'] = true;
 
         return $this;
     }
@@ -192,7 +192,7 @@ class FlexibleContent extends Field
      */
     public function settings(): self
     {
-        $this->config->set('acfe_flexible_layouts_settings', true);
+        $this->settings['acfe_flexible_layouts_settings'] = true;
 
         return $this;
     }
@@ -206,7 +206,7 @@ class FlexibleContent extends Field
      */
     public function ajax(): self
     {
-        $this->config->set('acfe_flexible_layouts_ajax', true);
+        $this->settings['acfe_flexible_layouts_ajax'] = true;
 
         return $this;
     }
@@ -224,7 +224,7 @@ class FlexibleContent extends Field
      */
     public function addActions(array $actions): self
     {
-        $this->config->set('acfe_flexible_add_actions', $actions);
+        $this->settings['acfe_flexible_add_actions'] = $actions;
 
         return $this;
     }
@@ -239,7 +239,7 @@ class FlexibleContent extends Field
      */
     public function emptyMessage(string $message): self
     {
-        $this->config->set('acfe_flexible_empty_message', $message);
+        $this->settings['acfe_flexible_empty_message'] = $message;
 
         return $this;
     }

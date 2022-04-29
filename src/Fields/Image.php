@@ -47,7 +47,7 @@ class Image extends Field
 	 */
 	public function uploader(string $value): self
 	{
-		$this->config->set('uploader', $value);
+		$this->settings['uploader'] = $value;
 
 		return $this;
 	}
