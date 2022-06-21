@@ -24,7 +24,7 @@ namespace Schrittweiter\Acf\Fields\Attributes;
 trait GraphQL
 {
     /** @return static */
-    public function graphql(): self
+    public function graphQL(): self
     {
         $this->config->set('show_in_graphql', true);
 
