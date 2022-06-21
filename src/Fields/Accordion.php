@@ -20,9 +20,9 @@
 namespace Schrittweiter\Acf\Fields;
 
 use WordPlate\Acf\Fields\Accordion as Field;
-use Schrittweiter\Acf\Fields\Attributes\GraphQL;
+use Schrittweiter\Acf\Fields\Attributes\GraphQl;
 
 class Accordion extends Field
 {
-    use GraphQL;
+    use GraphQl;
 }

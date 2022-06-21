@@ -20,9 +20,9 @@
 namespace Schrittweiter\Acf\Fields;
 
 use WordPlate\Acf\Fields\Text as Field;
-use Schrittweiter\Acf\Fields\Attributes\GraphQL;
+use Schrittweiter\Acf\Fields\Attributes\GraphQl;
 
 class Text extends Field
 {
-    use GraphQL;
+    use GraphQl;
 }

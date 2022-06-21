@@ -20,9 +20,9 @@
 namespace Schrittweiter\Acf\Fields;
 
 use WordPlate\Acf\Fields\User as Field;
-use Schrittweiter\Acf\Fields\Attributes\GraphQL;
+use Schrittweiter\Acf\Fields\Attributes\GraphQl;
 
 class User extends Field
 {
-    use GraphQL;
+    use GraphQl;
 }

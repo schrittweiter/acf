@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use Schrittweiter\Acf\Fields\Attributes\GraphQL;
+use Schrittweiter\Acf\Fields\Attributes\GraphQl;
 use WordPlate\Acf\Fields\Field;
 use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
 use WordPlate\Acf\Fields\Attributes\Instructions;
@@ -28,7 +28,7 @@ use WordPlate\Acf\Fields\Attributes\Wrapper;
 
 class Table extends Field
 {
-    use GraphQL;
+    use GraphQl;
 	use Instructions;
 	use Required;
 	use Wrapper;

@@ -21,7 +21,7 @@ declare(strict_types=1);
 
 namespace Schrittweiter\Acf\Fields\Attributes;
 
-trait GraphQL
+trait GraphQl
 {
     /** @return static */
     public function graphql(): self

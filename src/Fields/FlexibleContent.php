@@ -19,13 +19,13 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use Schrittweiter\Acf\Fields\Attributes\GraphQL;
+use Schrittweiter\Acf\Fields\Attributes\GraphQl;
 use WordPlate\Acf\Fields\FlexibleContent as Field;
 
 class FlexibleContent extends Field
 {
 
-    use GraphQL;
+    use GraphQl;
 
     /**
      * set defaults on call

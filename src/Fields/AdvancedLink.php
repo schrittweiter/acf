@@ -20,7 +20,7 @@
 namespace Schrittweiter\Acf\Fields;
 
 use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use Schrittweiter\Acf\Fields\Attributes\GraphQL;
+use Schrittweiter\Acf\Fields\Attributes\GraphQl;
 use WordPlate\Acf\Fields\Attributes\Instructions;
 use WordPlate\Acf\Fields\Attributes\Required;
 use WordPlate\Acf\Fields\Attributes\Wrapper;
@@ -29,7 +29,7 @@ use WordPlate\Acf\Fields\Field;
 class AdvancedLink extends Field
 {
 
-    use GraphQL;
+    use GraphQl;
 	use Required;
 	use ConditionalLogic;
 	use Wrapper;

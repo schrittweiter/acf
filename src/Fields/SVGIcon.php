@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use Schrittweiter\Acf\Fields\Attributes\GraphQL;
+use Schrittweiter\Acf\Fields\Attributes\GraphQl;
 use WordPlate\Acf\Fields\Field;
 use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
 use WordPlate\Acf\Fields\Attributes\DefaultValue;
@@ -31,7 +31,7 @@ use WordPlate\Acf\Fields\Attributes\Wrapper;
 
 class SVGIcon extends Field
 {
-    use GraphQL;
+    use GraphQl;
 	use Instructions;
 	use DefaultValue;
 	use Required;
