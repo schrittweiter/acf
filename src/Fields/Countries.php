@@ -19,6 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
+use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
 use WordPlate\Acf\Fields\Attributes\Instructions;
 use WordPlate\Acf\Fields\Attributes\MinMax;
@@ -30,7 +31,7 @@ use WordPlate\Acf\Fields\Field;
 
 class Countries extends Field
 {
-
+    use GraphQL;
 	use Required;
 	use ConditionalLogic;
 	use Wrapper;

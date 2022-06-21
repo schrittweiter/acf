@@ -19,6 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
+use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 use WordPlate\Acf\Fields\Field;
 use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
 use WordPlate\Acf\Fields\Attributes\Instructions;
@@ -28,6 +29,7 @@ use WordPlate\Acf\Fields\Attributes\Wrapper;
 
 class ImageMapping extends Field
 {
+    use GraphQL;
     use Instructions;
     use Required;
     use Nullable;

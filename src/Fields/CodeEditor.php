@@ -19,6 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
+use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
 use WordPlate\Acf\Fields\Attributes\DefaultValue;
 use WordPlate\Acf\Fields\Attributes\Instructions;
@@ -30,6 +31,7 @@ use WordPlate\Acf\Fields\Field;
 class CodeEditor extends Field
 {
 
+    use GraphQL;
 	use DefaultValue;
 	use Placeholder;
 	use ConditionalLogic;

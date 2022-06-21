@@ -19,6 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
+use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 use WordPlate\Acf\Fields\Attributes\Choices;
 use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
 use WordPlate\Acf\Fields\Attributes\DefaultValue;
@@ -34,6 +35,7 @@ use WordPlate\Acf\Fields\Field;
 class ImageSelector extends Field
 {
 
+    use GraphQL;
 	use DefaultValue;
 	use Choices;
 	use Multiple;
