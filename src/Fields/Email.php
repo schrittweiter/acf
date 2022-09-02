@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Email as Field;
+use Extended\ACF\Fields\Email as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class Email extends Field

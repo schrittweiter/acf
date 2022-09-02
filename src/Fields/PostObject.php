@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\PostObject as Field;
+use Extended\ACF\Fields\PostObject as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class PostObject extends Field

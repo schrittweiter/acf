@@ -20,12 +20,12 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Field;
-use WordPlate\Acf\Fields\Settings\ConditionalLogic;
-use WordPlate\Acf\Fields\Settings\Instructions;
-use WordPlate\Acf\Fields\Settings\Nullable;
-use WordPlate\Acf\Fields\Settings\Required;
-use WordPlate\Acf\Fields\Settings\Wrapper;
+use Extended\ACF\Fields\Field;
+use Extended\ACF\Fields\Settings\ConditionalLogic;
+use Extended\ACF\Fields\Settings\Instructions;
+use Extended\ACF\Fields\Settings\Nullable;
+use Extended\ACF\Fields\Settings\Required;
+use Extended\ACF\Fields\Settings\Wrapper;
 
 class OpenStreetMap extends Field
 {

@@ -18,7 +18,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\ColorPicker as Field;
+use Extended\ACF\Fields\ColorPicker as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class ColorPicker extends Field

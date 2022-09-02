@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Select as Field;
+use Extended\ACF\Fields\Select as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class Select extends Field

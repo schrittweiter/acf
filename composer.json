@@ -2,7 +2,7 @@
     "name": "schrittweiter/acf",
     "type": "library",
     "require": {
-        "wordplate/acf": "^12",
+        "vinkla/extended-acf": "^13",
         "php": ">=8.0"
     },
     "autoload": {

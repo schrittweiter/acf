@@ -20,7 +20,7 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\FlexibleContent as Field;
+use Extended\ACF\Fields\FlexibleContent as Field;
 
 class FlexibleContent extends Field
 {

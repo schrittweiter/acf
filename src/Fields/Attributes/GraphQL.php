@@ -26,7 +26,7 @@ trait GraphQL
     /** @return static */
     public function graphQL(): self
     {
-        $this->config->set('show_in_graphql', true);
+        $this->settings['show_in_graphql'] = true;
 
         return $this;
     }

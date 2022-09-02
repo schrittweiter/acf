@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\GoogleMap as Field;
+use Extended\ACF\Fields\GoogleMap as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class GoogleMap extends Field

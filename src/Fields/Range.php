@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Range as Field;
+use Extended\ACF\Fields\Range as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class Range extends Field

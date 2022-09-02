@@ -20,7 +20,7 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Layout as Field;
+use Extended\ACF\Fields\Layout as Field;
 
 class Layout extends Field
 {

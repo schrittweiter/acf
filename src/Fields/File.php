@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\File as Field;
+use Extended\ACF\Fields\File as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class File extends Field

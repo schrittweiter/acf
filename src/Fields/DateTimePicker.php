@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\DateTimePicker as Field;
+use Extended\ACF\Fields\DateTimePicker as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class DateTimePicker extends Field

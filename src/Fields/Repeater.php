@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Repeater as Field;
+use Extended\ACF\Fields\Repeater as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class Repeater extends Field
