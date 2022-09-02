@@ -20,9 +20,12 @@
 namespace Schrittweiter\Acf\Fields;
 
 use WordPlate\Acf\Fields\Checkbox as Field;
+use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class Checkbox extends Field
 {
+
+    use GraphQL;
 
 	/**
 	 * set defaults on call

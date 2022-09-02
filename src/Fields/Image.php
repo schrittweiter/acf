@@ -19,10 +19,12 @@
 
 namespace Schrittweiter\Acf\Fields;
 
+use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 use WordPlate\Acf\Fields\Image as Field;
 
 class Image extends Field
 {
+    use GraphQL;
 
 	/**
 	 * set defaults on call

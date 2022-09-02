@@ -19,7 +19,8 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Settings\Layout;
+use Schrittweiter\Acf\Fields\Attributes\GraphQL;
+use WordPlate\Acf\Fields\Attributes\Layout;
 use WordPlate\Acf\Fields\Field;
 use WordPlate\Acf\Fields\Settings\ConditionalLogic;
 use WordPlate\Acf\Fields\Settings\Instructions;
@@ -28,6 +29,7 @@ use WordPlate\Acf\Fields\Settings\Wrapper;
 
 class Clones extends Field
 {
+    use GraphQL;
 	use ConditionalLogic;
 	use Instructions;
 	use Required;

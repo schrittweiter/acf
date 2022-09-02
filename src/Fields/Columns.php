@@ -19,12 +19,14 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Settings\ConditionalLogic;
+use Schrittweiter\Acf\Fields\Attributes\GraphQL;
+use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
 use WordPlate\Acf\Fields\Field;
 
 class Columns extends Field
 {
 
+    use GraphQL;
 	use ConditionalLogic;
 
 	protected ?string $type = 'acfe_column';
