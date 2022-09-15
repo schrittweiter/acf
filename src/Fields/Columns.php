@@ -20,8 +20,8 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Field;
+use Extended\ACF\Fields\Settings\ConditionalLogic;
+use Extended\ACF\Fields\Field;
 
 class Columns extends Field
 {
@@ -29,7 +29,7 @@ class Columns extends Field
     use GraphQL;
 	use ConditionalLogic;
 
-	protected $type = 'acfe_column';
+	protected ?string $type = 'acfe_column';
 
 	/**
 	 * set defaults on call
@@ -52,7 +52,7 @@ class Columns extends Field
 	 */
 	public function columns(string $value): self
 	{
-		$this->config->set('columns', $value);
+		$this->settings['columns'] = $value;
 
 		return $this;
 	}
@@ -65,7 +65,7 @@ class Columns extends Field
 	 */
 	public function endpoint(): self
 	{
-		$this->config->set('endpoint', true);
+		$this->settings['endpoint'] = true;
 
 		return $this;
 	}
@@ -80,7 +80,7 @@ class Columns extends Field
 	 */
 	public function border(array $border): self
 	{
-		$this->config->set('border', $border);
+		$this->settings['border'] = $border;
 
 		return $this;
 	}

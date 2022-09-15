@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\PageLink as Field;
+use Extended\ACF\Fields\PageLink as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class PageLink extends Field

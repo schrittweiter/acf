@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Taxonomy as Field;
+use Extended\ACF\Fields\Taxonomy as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class Taxonomy extends Field

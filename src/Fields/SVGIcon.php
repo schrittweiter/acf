@@ -20,14 +20,14 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Field;
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\DefaultValue;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Multiple;
-use WordPlate\Acf\Fields\Attributes\Nullable;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
+use Extended\ACF\Fields\Field;
+use Extended\ACF\Fields\Settings\ConditionalLogic;
+use Extended\ACF\Fields\Settings\DefaultValue;
+use Extended\ACF\Fields\Settings\Instructions;
+use Extended\ACF\Fields\Settings\Multiple;
+use Extended\ACF\Fields\Settings\Nullable;
+use Extended\ACF\Fields\Settings\Required;
+use Extended\ACF\Fields\Settings\Wrapper;
 
 class SVGIcon extends Field
 {
@@ -40,7 +40,7 @@ class SVGIcon extends Field
 	use Wrapper;
 	use ConditionalLogic;
 
-	protected $type = 'svg_icon';
+	protected ?string $type = 'svg_icon';
 
 	/**
 	 * set defaults on call

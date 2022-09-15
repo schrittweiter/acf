@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\TimePicker as Field;
+use Extended\ACF\Fields\TimePicker as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class TimePicker extends Field

@@ -19,12 +19,12 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
+use Extended\ACF\Fields\Settings\ConditionalLogic;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
-use WordPlate\Acf\Fields\Field;
+use Extended\ACF\Fields\Settings\Instructions;
+use Extended\ACF\Fields\Settings\Required;
+use Extended\ACF\Fields\Settings\Wrapper;
+use Extended\ACF\Fields\Field;
 
 class AdvancedLink extends Field
 {
@@ -35,7 +35,7 @@ class AdvancedLink extends Field
 	use Wrapper;
 	use Instructions;
 
-	protected $type = 'acfe_advanced_link';
+	protected ?string $type = 'acfe_advanced_link';
 
 	/**
 	 * set defaults on call
@@ -59,7 +59,7 @@ class AdvancedLink extends Field
 	 */
 	public function postType(array $value): self
 	{
-		$this->config->set('post_type', $value);
+		$this->settings['post_type'] = $value;
 
 		return $this;
 	}
@@ -74,7 +74,7 @@ class AdvancedLink extends Field
 	 */
 	public function taxonomy(array $value): self
 	{
-		$this->config->set('taxonomy', $value);
+		$this->settings['taxonomy'] = $value;
 
 		return $this;
 	}

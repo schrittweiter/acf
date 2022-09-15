@@ -20,7 +20,7 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Layout as Field;
+use Extended\ACF\Fields\Layout as Field;
 
 class Layout extends Field
 {
@@ -51,7 +51,7 @@ class Layout extends Field
      */
     public function modalSize(string $size = ''): self
     {
-        $this->config->set('acfe_flexible_modal_edit_size', $size);
+        $this->settings['acfe_flexible_modal_edit_size'] = $size;
 
         return $this;
     }
@@ -68,8 +68,8 @@ class Layout extends Field
      */
     public function settingsClone(array $fieldgroups, string $size = ''): self
     {
-        $this->config->set('acfe_flexible_settings_size', $size);
-        $this->config->set('acfe_flexible_settings', $fieldgroups);
+        $this->settings['acfe_flexible_settings_size'] = $size;
+        $this->settings['acfe_flexible_settings'] = $fieldgroups;
 
         return $this;
     }
@@ -84,7 +84,7 @@ class Layout extends Field
      */
     public function category(array $size = []): self
     {
-        $this->config->set('acfe_flexible_category', $size);
+        $this->settings['acfe_flexible_category'] = $size;
 
         return $this;
     }
@@ -101,7 +101,7 @@ class Layout extends Field
      */
     public function defaultColumn(int $size = 12): self
     {
-        $this->config->set('acfe_layout_col', $size);
+        $this->settings['acfe_layout_col'] = $size;
 
         return $this;
     }
@@ -118,7 +118,7 @@ class Layout extends Field
      */
     public function allowedColumns(array $size = []): self
     {
-        $this->config->set('acfe_layout_allowed_col', $size);
+        $this->settings['acfe_layout_allowed_col'] = $size;
 
         return $this;
     }
@@ -148,9 +148,9 @@ class Layout extends Field
      */
     public function render(array $files = []): self
     {
-        $this->config->set('acfe_flexible_render_template', $files['template'] ?? '');
-        $this->config->set('acfe_flexible_render_style', $files['style'] ?? '');
-        $this->config->set('acfe_flexible_render_script', $files['script'] ?? '');
+        $this->settings['acfe_flexible_render_template'] = $files['template'] ?? '';
+        $this->settings['acfe_flexible_render_style'] = $files['style'] ?? '';
+        $this->settings['acfe_flexible_render_script'] = $files['script'] ?? '';
 
         return $this;
     }

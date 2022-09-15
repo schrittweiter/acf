@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\ButtonGroup as Field;
+use Extended\ACF\Fields\ButtonGroup as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class ButtonGroup extends Field

@@ -20,12 +20,12 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Field;
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Nullable;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
+use Extended\ACF\Fields\Field;
+use Extended\ACF\Fields\Settings\ConditionalLogic;
+use Extended\ACF\Fields\Settings\Instructions;
+use Extended\ACF\Fields\Settings\Nullable;
+use Extended\ACF\Fields\Settings\Required;
+use Extended\ACF\Fields\Settings\Wrapper;
 
 class OpenStreetMap extends Field
 {
@@ -36,7 +36,7 @@ class OpenStreetMap extends Field
 	use Wrapper;
 	use ConditionalLogic;
 
-	protected $type = 'open_street_map';
+	protected ?string $type = 'open_street_map';
 
 	/**
 	 * set defaults on call
@@ -58,7 +58,7 @@ class OpenStreetMap extends Field
 	 */
 	public function height(string $height): self
 	{
-		$this->config->set('height', $height);
+		$this->settings['height'] = $height;
 
 		return $this;
 	}
@@ -70,7 +70,7 @@ class OpenStreetMap extends Field
 	 */
 	public function allowMapLayers(): self
 	{
-		$this->config->set('allow_map_layers', false);
+		$this->settings['allow_map_layers'] = false;
 
 		return $this;
 	}
@@ -85,7 +85,7 @@ class OpenStreetMap extends Field
 	 */
 	public function returnFormat(string $return_format): self
 	{
-		$this->config->set('return_format', $return_format);
+		$this->settings['return_format'] = $return_format;
 
 		return $this;
 	}
@@ -100,8 +100,8 @@ class OpenStreetMap extends Field
 	 */
 	public function centerMap(float $center_lat, float $center_lng): self
 	{
-		$this->config->set('center_lat', $center_lat);
-		$this->config->set('center_lng', $center_lng);
+		$this->settings['center_lat'] = $center_lat;
+		$this->settings['center_lng'] = $center_lng;
 
 		return $this;
 	}
@@ -114,7 +114,7 @@ class OpenStreetMap extends Field
 	 */
 	public function zoom(int $zoom): self
 	{
-		$this->config->set('zoom', $zoom);
+		$this->settings['zoom'] = $zoom;
 
 		return $this;
 	}
@@ -128,7 +128,7 @@ class OpenStreetMap extends Field
 	 */
 	public function maxMarkers(int $max_markers): self
 	{
-		$this->config->set('max_markers', $max_markers);
+		$this->settings['max_markers'] = $max_markers;
 
 		return $this;
 	}
@@ -142,7 +142,7 @@ class OpenStreetMap extends Field
 	 */
 	public function layers(array $layers = ['Stadia.OSMBright']): self
 	{
-		$this->config->set('layers', $layers);
+		$this->settings['layers'] = $layers;
 
 		return $this;
 	}

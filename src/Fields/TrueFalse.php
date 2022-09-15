@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\TrueFalse as Field;
+use Extended\ACF\Fields\TrueFalse as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class TrueFalse extends Field

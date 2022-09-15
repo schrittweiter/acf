@@ -20,15 +20,15 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Field;
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Library;
-use WordPlate\Acf\Fields\Attributes\MimeTypes;
-use WordPlate\Acf\Fields\Attributes\Nullable;
-use WordPlate\Acf\Fields\Attributes\PreviewSize;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
+use Extended\ACF\Fields\Field;
+use Extended\ACF\Fields\Settings\ConditionalLogic;
+use Extended\ACF\Fields\Settings\Instructions;
+use Extended\ACF\Fields\Settings\Library;
+use Extended\ACF\Fields\Settings\MimeTypes;
+use Extended\ACF\Fields\Settings\Nullable;
+use Extended\ACF\Fields\Settings\PreviewSize;
+use Extended\ACF\Fields\Settings\Required;
+use Extended\ACF\Fields\Settings\Wrapper;
 
 class FocusPoint extends Field
 {
@@ -42,7 +42,7 @@ class FocusPoint extends Field
 	use PreviewSize;
 	use ConditionalLogic;
 
-	protected $type = 'focuspoint';
+	protected ?string $type = 'focuspoint';
 
 	/**
 	 * set defaults on call
@@ -53,5 +53,6 @@ class FocusPoint extends Field
 	public function __construct(string $label, ?string $name = null)
 	{
 		parent::__construct($label, $name);
+        $this->settings['required'] = 0;
 	}
 }

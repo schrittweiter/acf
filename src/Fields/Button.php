@@ -19,12 +19,12 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
+use Extended\ACF\Fields\Settings\ConditionalLogic;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
-use WordPlate\Acf\Fields\Field;
+use Extended\ACF\Fields\Settings\Instructions;
+use Extended\ACF\Fields\Settings\Required;
+use Extended\ACF\Fields\Settings\Wrapper;
+use Extended\ACF\Fields\Field;
 
 class Button extends Field
 {
@@ -35,7 +35,7 @@ class Button extends Field
 	use Wrapper;
 	use Instructions;
 
-	protected $type = 'acfe_button';
+	protected ?string $type = 'acfe_button';
 
 	/**
 	 * set defaults on call
@@ -62,7 +62,7 @@ class Button extends Field
 	 */
 	public function buttonValue(string $value): self
 	{
-		$this->config->set('button_value', $value);
+		$this->settings['button_value'] = $value;
 
 		return $this;
 	}
@@ -77,7 +77,7 @@ class Button extends Field
 	 */
 	public function buttonType(string $value): self
 	{
-		$this->config->set('button_type', $value);
+		$this->settings['button_type'] = $value;
 
 		return $this;
 	}
@@ -91,7 +91,7 @@ class Button extends Field
 	 */
 	public function buttonBefore(string $value): self
 	{
-		$this->config->set('button_before', $value);
+		$this->settings['button_before'] = $value;
 
 		return $this;
 	}
@@ -105,7 +105,7 @@ class Button extends Field
 	 */
 	public function buttonAfter(string $value): self
 	{
-		$this->config->set('button_after', $value);
+		$this->settings['button_after'] = $value;
 
 		return $this;
 	}
@@ -119,7 +119,7 @@ class Button extends Field
 	 */
 	public function buttonClass(string $value): self
 	{
-		$this->config->set('button_class', $value);
+		$this->settings['button_class'] = $value;
 
 		return $this;
 	}
@@ -133,7 +133,7 @@ class Button extends Field
 	 */
 	public function buttonId(string $value): self
 	{
-		$this->config->set('button_id', $value);
+		$this->settings['button_id'] = $value;
 
 		return $this;
 	}
@@ -147,7 +147,7 @@ class Button extends Field
 	 */
 	public function buttonAjax(): self
 	{
-		$this->config->set('button_ajax', true);
+		$this->settings['button_ajax'] = true;
 
 		return $this;
 	}

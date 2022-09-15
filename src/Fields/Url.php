@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Url as Field;
+use Extended\ACF\Fields\Url as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class Url extends Field

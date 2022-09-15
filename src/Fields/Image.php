@@ -20,7 +20,7 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Image as Field;
+use Extended\ACF\Fields\Image as Field;
 
 class Image extends Field
 {
@@ -49,7 +49,7 @@ class Image extends Field
 	 */
 	public function uploader(string $value): self
 	{
-		$this->config->set('uploader', $value);
+		$this->settings['uploader'] = $value;
 
 		return $this;
 	}

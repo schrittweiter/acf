@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Textarea as Field;
+use Extended\ACF\Fields\Textarea as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class Textarea extends Field

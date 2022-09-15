@@ -20,13 +20,13 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\DefaultValue;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Placeholder;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
-use WordPlate\Acf\Fields\Field;
+use Extended\ACF\Fields\Settings\ConditionalLogic;
+use Extended\ACF\Fields\Settings\DefaultValue;
+use Extended\ACF\Fields\Settings\Instructions;
+use Extended\ACF\Fields\Settings\Placeholder;
+use Extended\ACF\Fields\Settings\Required;
+use Extended\ACF\Fields\Settings\Wrapper;
+use Extended\ACF\Fields\Field;
 
 class CodeEditor extends Field
 {
@@ -39,7 +39,7 @@ class CodeEditor extends Field
 	use Required;
 	use Wrapper;
 
-	protected $type = 'acfe_code_editor';
+	protected ?string $type = 'acfe_code_editor';
 
 	/**
 	 * set defaults on call
@@ -65,7 +65,7 @@ class CodeEditor extends Field
 	 */
 	public function mode(string $value): self
 	{
-		$this->config->set('mode', $value);
+		$this->settings['mode'] = $value;
 
 		return $this;
 	}
@@ -77,7 +77,7 @@ class CodeEditor extends Field
 	 */
 	public function lines(): self
 	{
-		$this->config->set('lines', true);
+		$this->settings['lines'] = true;
 
 		return $this;
 	}
@@ -91,7 +91,7 @@ class CodeEditor extends Field
 	 */
 	public function indentUnit(int $value): self
 	{
-		$this->config->set('indent_unit', $value);
+		$this->settings['indent_unit'] = $value;
 
 		return $this;
 	}
@@ -105,7 +105,7 @@ class CodeEditor extends Field
 	 */
 	public function maxLength(int $value): self
 	{
-		$this->config->set('maxlength', $value);
+		$this->settings['maxlength'] = $value;
 
 		return $this;
 	}
@@ -119,7 +119,7 @@ class CodeEditor extends Field
 	 */
 	public function rows(int $value): self
 	{
-		$this->config->set('rows', $value);
+		$this->settings['rows'] = $value;
 
 		return $this;
 	}
@@ -133,7 +133,7 @@ class CodeEditor extends Field
 	 */
 	public function maxRows(int $value): self
 	{
-		$this->config->set('max_rows', $value);
+		$this->settings['max_rows'] = $value;
 
 		return $this;
 	}
@@ -145,7 +145,7 @@ class CodeEditor extends Field
 	 */
 	public function returnEntities(): self
 	{
-		$this->config->set('return_entities', true);
+		$this->settings['return_entities'] = true;
 
 		return $this;
 	}

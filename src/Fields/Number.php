@@ -19,7 +19,7 @@
 
 namespace Schrittweiter\Acf\Fields;
 
-use WordPlate\Acf\Fields\Number as Field;
+use Extended\ACF\Fields\Number as Field;
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
 
 class Number extends Field

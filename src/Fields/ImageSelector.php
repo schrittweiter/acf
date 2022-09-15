@@ -20,17 +20,17 @@
 namespace Schrittweiter\Acf\Fields;
 
 use Schrittweiter\Acf\Fields\Attributes\GraphQL;
-use WordPlate\Acf\Fields\Attributes\Choices;
-use WordPlate\Acf\Fields\Attributes\ConditionalLogic;
-use WordPlate\Acf\Fields\Attributes\DefaultValue;
-use WordPlate\Acf\Fields\Attributes\DirectionLayout;
-use WordPlate\Acf\Fields\Attributes\Instructions;
-use WordPlate\Acf\Fields\Attributes\Multiple;
-use WordPlate\Acf\Fields\Attributes\Nullable;
-use WordPlate\Acf\Fields\Attributes\Required;
-use WordPlate\Acf\Fields\Attributes\ReturnFormat;
-use WordPlate\Acf\Fields\Attributes\Wrapper;
-use WordPlate\Acf\Fields\Field;
+use Extended\ACF\Fields\Settings\Choices;
+use Extended\ACF\Fields\Settings\ConditionalLogic;
+use Extended\ACF\Fields\Settings\DefaultValue;
+use Extended\ACF\Fields\Settings\DirectionLayout;
+use Extended\ACF\Fields\Settings\Instructions;
+use Extended\ACF\Fields\Settings\Multiple;
+use Extended\ACF\Fields\Settings\Nullable;
+use Extended\ACF\Fields\Settings\Required;
+use Extended\ACF\Fields\Settings\ReturnFormat;
+use Extended\ACF\Fields\Settings\Wrapper;
+use Extended\ACF\Fields\Field;
 
 class ImageSelector extends Field
 {
@@ -47,7 +47,7 @@ class ImageSelector extends Field
 	use Required;
 	use Wrapper;
 
-	protected $type = 'acfe_image_selector';
+	protected ?string $type = 'acfe_image_selector';
 
 	/**
 	 * set defaults on call
@@ -71,9 +71,9 @@ class ImageSelector extends Field
 	 */
 	public function container(string $width = '', string $height = '', int $border = 4): self
 	{
-		$this->config->set('width', $width);
-		$this->config->set('height', $height);
-		$this->config->set('border', $border);
+		$this->settings['width'] = $width;
+		$this->settings['height'] = $height;
+		$this->settings['border'] = $border;
 
 		return $this;
 	}
@@ -86,7 +86,7 @@ class ImageSelector extends Field
 	 */
 	public function imageSize(string $size): self
 	{
-		$this->config->set('image_size', $size);
+		$this->settings['image_size'] = $size;
 
 		return $this;
 	}
