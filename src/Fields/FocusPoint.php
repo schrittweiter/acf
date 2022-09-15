@@ -53,5 +53,6 @@ class FocusPoint extends Field
 	public function __construct(string $label, ?string $name = null)
 	{
 		parent::__construct($label, $name);
+        $this->settings['required'] = 0;
 	}
 }
