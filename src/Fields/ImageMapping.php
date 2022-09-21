@@ -63,6 +63,19 @@ class ImageMapping extends Field
         return $this;
     }
 
+    /**
+     * Default image
+     *
+     * @param string $defaultImage
+     * @return $this
+     */
+    public function defaultImage(string $defaultImage): self
+    {
+        $this->config->set('default_image', $defaultImage);
+
+        return $this;
+    }
+
 
 	/**
 	 * Percentage Based Coordinates'
